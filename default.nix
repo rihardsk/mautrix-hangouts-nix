@@ -9,15 +9,15 @@ let
   customPackages = self: super:
     let callPackage = pkgs.newScope self;
     in {
-      hangups = callPackage ./hangups-nix2 {};
-      readlike = callPackage ./readlike-nix {};
-      ReParser = callPackage ./reparser-nix {};
-      mautrix-hangouts = callPackage ./mautrix-hangouts-nix {};
+      hangups = callPackage ./python-pkgs/hangups {};
+      readlike = callPackage ./python-pkgs/readlike {};
+      ReParser = callPackage ./python-pkgs/reparser {};
+      mautrix-hangouts = callPackage ./python-pkgs/mautrix-hangouts {};
       # these have incompatible versions in nixpkgs
-      ConfigArgParse_0-11 = callPackage ./configargparse-nix {};
-      MechanicalSoup_0-6 = callPackage ./mechanicalsoup-nix {};
-      urwid_1-3-1 = callPackage ./urwid-nix {};
-      protobuf_3-6-1 = callPackage ./protobuf-nix {};
+      ConfigArgParse_0-11 = callPackage ./python-pkgs/configargparse {};
+      MechanicalSoup_0-6 = callPackage ./python-pkgs/mechanicalsoup {};
+      urwid_1-3-1 = callPackage ./python-pkgs/urwid {};
+      protobuf_3-6-1 = callPackage ./python-pkgs/protobuf {};
     };
 
   pythonPackages =
