@@ -2,10 +2,6 @@
 }:
 
 let
-
-  inherit (pkgs) makeWrapper;
-  inherit (pkgs.stdenv.lib) fix' extends inNixShell hasAttr optionalString;
-
   customPackages = self: super:
     let callPackage = pkgs.newScope self;
     in {
