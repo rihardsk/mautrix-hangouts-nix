@@ -47,6 +47,7 @@ buildPythonPackage rec {
     CommonMark
     hangups
     mautrix
+    psycopg2
     python_magic
     ruamel_yaml
     setuptools  # needed because mautrix-hangouts imports pkg_resources somewhere within
