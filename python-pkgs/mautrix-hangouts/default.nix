@@ -10,6 +10,7 @@
 , sqlalchemy
 , mautrix-hangouts
 , psycopg2
+, setuptools
 , buildPythonPackage
 , pythonOlder
 , fetchPypi
@@ -48,6 +49,7 @@ buildPythonPackage rec {
     mautrix
     python_magic
     ruamel_yaml
+    setuptools  # needed because mautrix-hangouts imports pkg_resources somewhere within
     sqlalchemy
   ];
 
