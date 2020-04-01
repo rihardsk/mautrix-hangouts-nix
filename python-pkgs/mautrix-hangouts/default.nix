@@ -34,15 +34,14 @@ buildPythonPackage rec {
     inherit (gitDetails) owner repo rev sha256;
   };
 
-  # copied from mautrix-telegram, it seems it isn't doing anything here
+  # `alembic` isn't needed during runtime. See comments below.
   postPatch = ''
-    sed -i -e '/alembic>/d' setup.py
+    sed -i -e '/alembic>/d' requirements.txt
   '';
 
   doCheck = false;
   propagatedBuildInputs = [
     aiohttp
-    alembic
     CommonMark
     hangups
     mautrix

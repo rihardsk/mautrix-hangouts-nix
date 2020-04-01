@@ -8,7 +8,10 @@ let
       hangups = callPackage ./python-pkgs/hangups {};
       readlike = callPackage ./python-pkgs/readlike {};
       ReParser = callPackage ./python-pkgs/reparser {};
-      mautrix-hangouts = callPackage ./python-pkgs/mautrix-hangouts {};
+      # Applying recurseIntoAttrs to an attribute set will cause nix-env to look
+      # inside the set for derivations. This is needed so that mautrix-hangouts.alembic
+      # (which got there via passthru) is built
+      mautrix-hangouts = pkgs.recurseIntoAttrs (callPackage ./python-pkgs/mautrix-hangouts {});
       # these have incompatible versions in nixpkgs
       ConfigArgParse_0-11 = callPackage ./python-pkgs/configargparse {};
       MechanicalSoup_0-6 = callPackage ./python-pkgs/mechanicalsoup {};
