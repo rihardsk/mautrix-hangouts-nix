@@ -9,6 +9,7 @@
 , ruamel_yaml
 , sqlalchemy
 , mautrix-hangouts
+, psycopg2
 , buildPythonPackage
 , pythonOlder
 , fetchPypi
@@ -59,6 +60,7 @@ buildPythonPackage rec {
   passthru.alembic = alembic.overrideAttrs (old: {
     propagatedBuildInputs = old.propagatedBuildInputs ++ [
       mautrix-hangouts
+      psycopg2
     ];
   });
 }
