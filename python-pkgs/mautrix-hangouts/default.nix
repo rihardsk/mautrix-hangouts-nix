@@ -4,7 +4,7 @@
 , alembic
 , CommonMark
 , hangups
-, mautrix
+, mautrix_0-5-7
 , python_magic
 , ruamel_yaml
 , sqlalchemy
@@ -46,7 +46,7 @@ buildPythonPackage rec {
     aiohttp
     CommonMark
     hangups
-    mautrix
+    mautrix_0-5-7
     psycopg2
     python_magic
     ruamel_yaml

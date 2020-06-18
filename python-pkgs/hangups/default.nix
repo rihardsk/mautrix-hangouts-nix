@@ -15,7 +15,7 @@
 }:
 buildPythonPackage {
     name = "hangups-0.4.9";
-    src = fetchurl { url = "https://files.pythonhosted.org/packages/98/e1/809ced9bbab2356a381465201d02017c12819999c9776dc4bd3293713bc9/hangups-0.4.9.tar.gz"; sha256 = "4a29b30aa1cb3650b825dfc88c8147dc88a83b11226d6875f54192c6508984cb"; };
+    src = fetchurl { url = "https://files.pythonhosted.org/packages/10/35/d4323c671db4572bc461f7aca232841076e497edbeae4273b97e9622f275/hangups-0.4.10.tar.gz"; sha256 = "450edf33b9daf7cfb38bc8d310990becea3f791894068cb2e55780c566fa8973"; };
     doCheck = false;
     propagatedBuildInputs = [
       ConfigArgParse_0-11

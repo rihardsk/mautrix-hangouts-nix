@@ -17,6 +17,7 @@ let
       MechanicalSoup_0-6 = callPackage ./python-pkgs/mechanicalsoup {};
       urwid_1-3-1 = callPackage ./python-pkgs/urwid {};
       protobuf_3-6-1 = callPackage ./python-pkgs/protobuf {};
+      mautrix_0-5-7 = callPackage ./python-pkgs/mautrix {};
     };
 
   pythonPackages =
