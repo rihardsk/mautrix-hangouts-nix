@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index 149b5a0..5c0c10f 100644
+--- a/setup.py
++++ b/setup.py
+@@ -71,6 +71,7 @@ setuptools.setup(
+     ]},
+     data_files=[
+         (".", ["alembic.ini"]),
++        (".", ["mautrix_hangouts/example-config.yaml"]),
+         ("alembic", ["alembic/env.py"]),
+         ("alembic/versions", glob.glob("alembic/versions/*.py"))
+     ],

@@ -36,6 +36,8 @@ buildPythonPackage rec {
     inherit (gitDetails) owner repo rev sha256;
   };
 
+  patches = [ ./01-copy-example-config-to-output.patch ];
+
   # `alembic` isn't needed during runtime. See comments below.
   postPatch = ''
     sed -i -e '/alembic>/d' requirements.txt
