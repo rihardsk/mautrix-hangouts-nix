@@ -4,7 +4,7 @@
 , alembic
 , CommonMark
 , hangups
-, mautrix_0-5-7
+, mautrix_0-7-1
 , python_magic
 , ruamel_yaml
 , sqlalchemy
@@ -21,7 +21,7 @@ let gitDetails = builtins.fromJSON (builtins.readFile ./mautrix-hangouts.json );
 in
 buildPythonPackage rec {
   pname = "mautrix-hangouts";
-  version = "0.1.0.dev8";
+  version = "0.1.1";
   disabled = pythonOlder "3.6";
   # format = "wheel";
 
@@ -48,7 +48,7 @@ buildPythonPackage rec {
     aiohttp
     CommonMark
     hangups
-    mautrix_0-5-7
+    mautrix_0-7-1
     psycopg2
     python_magic
     ruamel_yaml

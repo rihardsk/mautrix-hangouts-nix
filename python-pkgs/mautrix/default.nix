@@ -6,8 +6,8 @@
 , attrs
 }:
 buildPythonPackage {
-  name = "mautrix-0.5.7";
-  src = fetchurl { url = "https://files.pythonhosted.org/packages/41/b3/bbf71ab2eb0fa6a8bbdcec8094c6c3b8d86d62808011ed2f171aa7c1e006/mautrix-0.5.7.tar.gz"; sha256 = "3311a6461d13b2dd5933e602967e4762e9ec32cab7afec1bf153b93493acfe33"; };
+  name = "mautrix-0.7.1";
+  src = fetchurl { url = "https://files.pythonhosted.org/packages/06/e2/6b84870a67fdd2760277ef0462011b1454686dcae117975350287d515e13/mautrix-0.7.1.tar.gz"; sha256 = "3669af0951a92de0bd35a656f1dc6b108c4161d6fec36282ab2a250be7168ae0"; };
   doCheck = false;
   propagatedBuildInputs = [
     aiohttp

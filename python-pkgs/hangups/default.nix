@@ -14,8 +14,8 @@
 , urwid_1-3-1
 }:
 buildPythonPackage {
-    name = "hangups-0.4.9";
-    src = fetchurl { url = "https://files.pythonhosted.org/packages/10/35/d4323c671db4572bc461f7aca232841076e497edbeae4273b97e9622f275/hangups-0.4.10.tar.gz"; sha256 = "450edf33b9daf7cfb38bc8d310990becea3f791894068cb2e55780c566fa8973"; };
+    name = "hangups-0.4.11";
+    src = fetchurl { url = "https://files.pythonhosted.org/packages/03/01/9285c437220076cef1e5448817dabcb81cb9a2d35065d313e51a63630faa/hangups-0.4.11.tar.gz"; sha256 = "db530cd7352c3fef4513bce38f07d19b79180b3aefed71afd9f369bab7cab498"; };
     doCheck = false;
     propagatedBuildInputs = [
       ConfigArgParse_0-11
