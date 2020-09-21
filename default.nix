@@ -20,13 +20,11 @@ let
       mautrix_0-7-1 = callPackage ./python-pkgs/mautrix {};
     };
 
-  maybeQt = with pkgs.lib; if strings.versionAtLeast version "21.0" then { inherit (pkgs) qt5; } else {};
-  pythonArgs = {
+  pythonPackages = import "${toString pkgs.path}/pkgs/top-level/python-packages.nix" {
     inherit pkgs;
     inherit (pkgs) stdenv;
     python = pkgs.python3;
     overrides = customPackages;
-  } // maybeQt;
-  pythonPackages = import "${toString pkgs.path}/pkgs/top-level/python-packages.nix" pythonArgs;
+  };
 in
 pythonPackages.mautrix-hangouts
