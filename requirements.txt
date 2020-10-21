@@ -1,0 +1,2 @@
+mautrix-hangouts
+# -e git://github.com/rihardsk/mautrix-hangouts.git@support-formatting#egg=mautrix-hangouts
