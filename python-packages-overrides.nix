@@ -22,9 +22,21 @@ self: super: {
   # inside the set for derivations. This is needed so that mautrix-hangouts.alembic
   # (which got there via passthru) is built
   mautrix-hangouts = pkgs.recurseIntoAttrs (super.mautrix-hangouts.override (attrs: {
-    propagatedBuildInputs = with self; attrs.propagatedBuildInputs ++ [
-      psycopg2
-      setuptools  # needed because mautrix-hangouts imports pkg_resources somewhere within
+    # propagatedBuildInputs = with self; attrs.propagatedBuildInputs ++ [
+    #   psycopg2
+    #   setuptools  # needed because mautrix-hangouts imports pkg_resources somewhere within
+    # ];
+    propagatedBuildInputs = [
+      self.psycopg2
+      self.setuptools  # needed because mautrix-hangouts imports pkg_resources somewhere within
+      self."SQLAlchemy"
+      self."aiohttp"
+      # self."alembic"  # it's weird that, if we leave this in, the passthru elembic doesn't build
+      self."commonmark"
+      self."hangups"
+      self."mautrix"
+      self."python-magic"
+      self."ruamel.yaml"
     ];
 
     # `alembic` isn't needed during runtime. See comments below.
