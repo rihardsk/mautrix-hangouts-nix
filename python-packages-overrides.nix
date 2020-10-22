@@ -18,7 +18,10 @@ self: super: {
     ];
   });
 
-  mautrix-hangouts = super.mautrix-hangouts.override (attrs: {
+  # Applying recurseIntoAttrs to an attribute set will cause nix-env to look
+  # inside the set for derivations. This is needed so that mautrix-hangouts.alembic
+  # (which got there via passthru) is built
+  mautrix-hangouts = pkgs.recurseIntoAttrs (super.mautrix-hangouts.override (attrs: {
     propagatedBuildInputs = with self; attrs.propagatedBuildInputs ++ [
       psycopg2
       setuptools  # needed because mautrix-hangouts imports pkg_resources somewhere within
@@ -41,7 +44,7 @@ self: super: {
         psycopg2
       ];
     });
-  });
+  }));
 
   # Common needs
 
