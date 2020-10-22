@@ -39,6 +39,10 @@ self: super: {
       self."ruamel.yaml"
     ];
 
+    patches = [
+      ./02-add-entrypoints.patch
+    ];
+
     # `alembic` isn't needed during runtime. See comments below.
     postPatch = ''
       sed -i -e '/alembic>/d' requirements.txt

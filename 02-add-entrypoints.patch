@@ -1,0 +1,14 @@
+diff --git a/setup.py b/setup.py
+index a15336d..307fb56 100644
+--- a/setup.py
++++ b/setup.py
+@@ -60,6 +60,9 @@ setuptools.setup(
+         "Programming Language :: Python :: 3.7",
+         "Programming Language :: Python :: 3.8",
+     ],
++    entry_points={"console_scripts": [
++        "mautrix-hangouts = mautrix_hangouts.__main__:main"
++    ]},
+     package_data={"mautrix_hangouts": [
+         "web/static/*.png", "web/static/*.css", "web/static/*.html", "web/static/*.js",
+         "example-config.yaml"
