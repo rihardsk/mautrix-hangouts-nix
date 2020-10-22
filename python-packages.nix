@@ -309,8 +309,8 @@ self: super: {
     version = "0.1.3+dev.f83d69fe";
     src = fetchgit {
       url = "git://github.com/rihardsk/mautrix-hangouts.git";
-      rev = "a084bdbaf379de2792d0d0a9d0b5eb85b1ad72fe";
-      sha256 = "0ym0acq2ij4m9kmqzvnb4pagwr58n3fnixbv1jpq7cas9p6smkac";
+      rev = "f83d69fe43370207dfba22bba38ff2f421fa2971";
+      sha256 = "06w5mf8d6dwq59w74pk74iffv08fxpk21b0n5amq8ln2cq32bxfb";
     };
     format = "setuptools";
     doCheck = false;
