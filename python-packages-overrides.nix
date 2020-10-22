@@ -18,6 +18,12 @@ self: super: {
     ];
   });
 
+  # python-magic = super.python-magic.override (attrs: {
+  #   postPatch = ''
+  #     substituteInPlace magic.py --replace "ctypes.util.find_library('magic')" "'${pkgs.file}/lib/libmagic${pkgs.stdenv.hostPlatform.extensions.sharedLibrary}'"
+  #   '';
+  # });
+
   # Applying recurseIntoAttrs to an attribute set will cause nix-env to look
   # inside the set for derivations. This is needed so that mautrix-hangouts.alembic
   # (which got there via passthru) is built
@@ -35,7 +41,8 @@ self: super: {
       self."commonmark"
       self."hangups"
       self."mautrix"
-      self."python-magic"
+      # self."python-magic"
+      basePythonPackages."python_magic"
       self."ruamel.yaml"
     ];
 
