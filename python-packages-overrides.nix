@@ -38,7 +38,7 @@ self: super: {
     passthru.alembic = self.alembic.overrideAttrs (old: {
       propagatedBuildInputs = with self; old.propagatedBuildInputs ++ [
         mautrix-hangouts
-        pkgs.psycopg2
+        psycopg2
       ];
     });
   });
