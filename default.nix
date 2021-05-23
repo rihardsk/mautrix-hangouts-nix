@@ -1,4 +1,4 @@
 { pkgs ? import <nixpkgs> {}
 }:
 
-(import ./setup.nix {}).targetPython.pkgs.mautrix-hangouts
+(import ./setup.nix {inherit pkgs;}).targetPython.pkgs.mautrix-hangouts
